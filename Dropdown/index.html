@@ -8,12 +8,36 @@
     <title>DropDown</title>
 </head>
 <body>
-     <div>
-         <ul>
-             <li><a href="index.html">Home</a></li>
-             <li><a href="##">Contato</a></li>
-             <li><a href="##">Trabalhos</a></li>
-         </ul>
-        </div>
+    <div class="NavMenu">
+         <a href="index.html">Home</a>
+         <a href="##">Contato</a>
+         <div class="DropDown">
+             <button id="botao" onclick="Down()">Trabalhos <i class="fa fa-caret-down"></i></button>
+                 <div class="BotaoDropDown" id="DropDownId">
+                    <a href="#Casa">Casa</a>
+                    <a href="#Escola">Escola</a>
+                    <a href="#Curso">Curso</a>
+                 </div>
+         </div>
+    </div>
+    <script>
+        function Down(){
+            var BotaoDropDown = document.querySelector('.BotaoDropDown');
+            // document.querySelector('.BotaoDropDown').classList.add('mostrar')
+          if(BotaoDropDown.classList.contains('mostrar')){
+
+             BotaoDropDown.classList.remove('mostrar')
+         }
+          else {
+             BotaoDropDown.classList.add('mostrar')
+         }
+       }
+        
+//        window.onclick = function(event){
+//         var BotaoDropDown = document.querySelector('.BotaoDropDown');
+// }
+        
+    
+    </script>
 </body>
 </html>
